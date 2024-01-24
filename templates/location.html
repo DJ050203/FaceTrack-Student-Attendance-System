@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>Location Range Check</title>
+  <link href="{{ url_for('static', filename='stylesheets/location.css') }}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <p id="result">Determining location...</p>
+
+  <script>
+    // Define the target location's latitude and longitude
+    var targetLatitude = 12.9220;
+    var targetLongitude = 77.5671;
+    var targetRadius = 300; // in meters
+
+    // Check if the Geolocation API is supported
+    if (navigator.geolocation) {
+      // Get the user's current position
+      navigator.geolocation.getCurrentPosition(checkLocation, showError);
+    } else {
+      // Geolocation is not supported by the browser
+      document.getElementById("result").innerHTML = "Geolocation is not supported by your browser.";
+    }
+
+    // Callback function for successful geolocation retrieval
+    function checkLocation(position) {
+      var userLatitude = position.coords.latitude;
+      var userLongitude = position.coords.longitude;
+
+      // Calculate the distance between the user and the target location
+      var distance = calculateDistance(userLatitude, userLongitude, targetLatitude, targetLongitude);
+
+      // Compare the distance to the target radius
+      if (distance <= targetRadius) {
+        document.getElementById("result").innerHTML = "You are within the BNMIT campus.";
+
+        setTimeout(function () {location.replace("http://127.0.0.1:5000/inlocation")}, 10000);
+
+      } else {
+        document.getElementById("result").innerHTML = "You are outside the BNMIT campus.";
+        setTimeout(function () {location.replace("http://127.0.0.1:5000/status")}, 10000);
+      }
+    }
+
+    // Callback function for geolocation errors
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          document.getElementById("result").innerHTML = "User denied the request for Geolocation.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          document.getElementById("result").innerHTML = "Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          document.getElementById("result").innerHTML = "The request to get user location timed out.";
+          break;
+        case error.UNKNOWN_ERROR:
+          document.getElementById("result").innerHTML = "An unknown error occurred.";
+          break;
+      }
+    }
+
+    // Function to calculate the distance between two coordinates using the Haversine formula
+    function calculateDistance(lat1, lon1, lat2, lon2) {
+      var earthRadius = 6371000; // in meters
+      var dLat = toRadians(lat2 - lat1);
+      var dLon = toRadians(lon2 - lon1);
+      var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      var distance = earthRadius * c;
+      return distance;
+    }
+
+    // Function to convert degrees to radians
+    function toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+    }
+  </script>
+</body>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='stylesheets/index.css') }}" rel="stylesheet" type="text/css" />
+    <title>Attendance Status</title>
+</head>
+<body>
+    <h1>Student Attendance Status</h1>
+    <div class="column">
+        <h1>
+            &nbsp;
+        </h1>
+        <table>
+            <h3>Subject: STATISTIC, PROBABILITY AND GRAPH THEORY       Subject Code: 21MAI141</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data1 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <h3>Subject: MICROCONTROLLER AND EMBEDDED SYSTEMS       Subject Code: 21CSE142</h3>
+        <table>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data2 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: DATABASE MANAGEMENT SYSTEMS       Subject Code: 21CSE143</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data3 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: DESIGN AND ANALYSIS OF ALGORITHMS       Subject Code: 21CSE144</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data4 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: PYTHON PROGRAMMING AND APPLICATIONS      Subject Code: 21CSE145</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data5 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: CONSTITUTION OF INDIA AND PROFESSIONAL ETHICS       Subject Code: 21CIP146</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data6 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: KANNADA       Subject Code: 21KAN147</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data7 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: SOFT SKILL-2       Subject Code: 21SFT148</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data8 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <h1>
+        &nbsp;
+    </h1>
+    <div class="column">
+        <table>
+            <h3>Subject: INTERNSHIP-1       Subject Code: 21CSE149</h3>
+            <tr>
+                <th>USN</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Code</th>
+                <!-- Add more column headers as needed -->
+            </tr>
+            {% for row in data9 %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <!-- Add more columns here as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

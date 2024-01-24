@@ -1,0 +1,89 @@
+body{
+    background-color:black;
+    
+}
+img {
+    max-width: 100%;
+    height: 50%;
+    margin-bottom: 100px;
+    margin-top: -150px;
+  }
+.row1{
+    color: rgb(18, 131, 202);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+.row2{
+    color:white;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+    
+}
+.column{
+        float: left;
+        width: 50%;
+      }
+.welc
+{
+    background-color:black;
+    background-size: 100px;
+    color:black;
+    text-align: center;
+    shape-image-threshold: calc();
+
+}
+.Login
+{
+    font-family: fantasy;
+    margin-top: 125px;
+    margin-left: 78px;
+    color:rgb(180, 180, 199);
+}
+.USN
+{
+    font-size: larger;
+    background-color: black;
+    color:rgb(180, 180, 199);
+}
+.password
+{
+    font-size: larger;
+    color:rgb(180, 180, 199);
+}
+input[type=text]
+{
+    background-color:grey;
+    height:2em;
+    border-radius: 10px;
+
+}
+input[type=password]
+{
+    background-color: grey;
+    height: 2em;
+    border-radius: 10px;
+}
+input[type=submit]
+{
+    font-family: cursive;
+    font-weight: bolder;
+    background-color:lightyellow;
+    font-size: medium;
+    width: 10em;
+    height: 3em;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 38px;
+    color:grey;
+    box-shadow: 4px 4px 0 grey;
+    transition: transform 0.2s, box-shadow 0.2s ;
+}
+button :active{
+    transform: translateX(4px) translateY(4px);
+    box-shadow: 0 0 0 grey;
+}
+
+
+
